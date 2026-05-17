@@ -1,6 +1,20 @@
 # Kundan Designer
 
-AI-powered Indian jewellery design tool. Configure your piece and generate photorealistic renders using OpenAI's `gpt-image-1` model.
+[![CI](https://github.com/anoopsimon/kundan-designer/actions/workflows/ci.yml/badge.svg)](https://github.com/anoopsimon/kundan-designer/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![OpenAI](https://img.shields.io/badge/OpenAI-gpt--image--1-black.svg)](https://platform.openai.com/docs/models/gpt-image-1)
+
+AI-powered Indian jewellery design generator. Configure a piece and turn it into a photorealistic render with OpenAI's `gpt-image-1` model.
+
+Built to be easy to demo, easy to remix, and visually strong enough to share without extra explanation.
+
+## Highlights
+
+- Instant product-style renders for Kundan, Polki, Meenakari, temple, oxidised, and plain metalwork.
+- One-command startup for the full stack.
+- Clean Go backend plus React frontend.
+- Session history and PNG download built in.
+- Strong niche focus: Indian jewellery designers, boutique owners, bridal styling, and fashion-tech builders.
 
 ## Stack
 
@@ -81,6 +95,12 @@ kundan-designer/
 | Stones | Ruby, Emerald, Sapphire, Pearl, Diamond, Coral, Turquoise, Onyx |
 | Arrangement | Single centre, Cluster, Stone border, Fully set, Scattered |
 | Extra prompt | Free text to add any detail |
+
+## Try these prompts
+
+- Bridal Kundan choker with ruby and emerald accents, heavy gold base, temple border, pure white background
+- South Indian temple necklace with antique gold, pearl drops, intricate motifs, luxury catalog photography
+- Oxidised silver jhumka with turquoise and coral stones, asymmetrical cluster setting, studio product shot
 
 ---
 
