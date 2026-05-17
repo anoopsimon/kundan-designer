@@ -20,6 +20,7 @@ Built to be easy to demo, easy to remix, and visually strong enough to share wit
 - One-command startup for the full stack.
 - Clean Go backend plus React frontend.
 - Session history and PNG download built in.
+- Optional luxe studio background for more polished jewellery presentation.
 - Strong niche focus: Indian jewellery designers, boutique owners, bridal styling, and fashion-tech builders.
 
 ## Stack
@@ -100,6 +101,7 @@ kundan-designer/
 | Style | Kundan, Meenakari, Polki, Temple, Oxidised, Plain |
 | Stones | Ruby, Emerald, Sapphire, Pearl, Diamond, Coral, Turquoise, Onyx |
 | Arrangement | Single centre, Cluster, Stone border, Fully set, Scattered |
+| Background | Plain white or stunning editorial jewellery backdrop |
 | Extra prompt | Free text to add any detail |
 
 ## Try these prompts
@@ -127,6 +129,7 @@ kundan-designer/
   "style": "kundan",
   "stones": ["ruby", "emerald"],
   "arrangement": "single",
+  "useStunningBackground": true,
   "extraPrompt": "bridal style with peacock motif"
 }
 ```

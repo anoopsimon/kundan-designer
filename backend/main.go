@@ -16,12 +16,13 @@ import (
 // ── request / response types ─────────────────────────────────────────────────
 
 type GenerateRequest struct {
-	PieceType   string   `json:"pieceType"`
-	Metal       string   `json:"metal"`
-	Stones      []string `json:"stones"`
-	Style       string   `json:"style"`
-	Arrangement string   `json:"arrangement"`
-	ExtraPrompt string   `json:"extraPrompt"`
+	PieceType             string   `json:"pieceType"`
+	Metal                 string   `json:"metal"`
+	Stones                []string `json:"stones"`
+	Style                 string   `json:"style"`
+	Arrangement           string   `json:"arrangement"`
+	ExtraPrompt           string   `json:"extraPrompt"`
+	UseStunningBackground bool     `json:"useStunningBackground"`
 }
 
 type GenerateResponse struct {
@@ -106,6 +107,17 @@ func buildPrompt(r GenerateRequest) string {
 			"sharp focus, photorealistic, commercial product shot",
 		piece, metal, style, stonesStr, arrangement,
 	)
+
+	if r.UseStunningBackground {
+		prompt = fmt.Sprintf(
+			"Professional luxury jewellery product photography of a %s, %s metal base, %s, "+
+				"featuring %s arranged in %s pattern, "+
+				"set on a warm beige and tan editorial studio backdrop with a subtle textured surface, "+
+				"soft diffused lighting, elegant shadows, refined reflections, premium catalog styling, "+
+				"ultra detailed macro jewellery photography, 8k resolution, sharp focus, photorealistic commercial product shot",
+			piece, metal, style, stonesStr, arrangement,
+		)
+	}
 
 	if r.ExtraPrompt != "" {
 		prompt += ", " + r.ExtraPrompt

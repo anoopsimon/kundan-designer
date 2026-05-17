@@ -55,6 +55,7 @@ const DEFAULT = {
   stones: ['ruby', 'emerald'],
   arrangement: 'single',
   extraPrompt: '',
+  useStunningBackground: true,
 }
 
 export default function Configurator({ onGenerate, loading }) {
@@ -162,6 +163,25 @@ export default function Configurator({ onGenerate, loading }) {
             </button>
           ))}
         </div>
+      </div>
+
+      <div className="cfg-section">
+        <label className="bg-toggle">
+          <input
+            type="checkbox"
+            checked={config.useStunningBackground}
+            onChange={e => set('useStunningBackground', e.target.checked)}
+          />
+          <span className="bg-toggle-ui">
+            <span className="bg-toggle-thumb" />
+          </span>
+          <span className="bg-toggle-copy">
+            <span className="bg-toggle-title">Use stunning studio background</span>
+            <span className="bg-toggle-subtitle">
+              Swaps the plain white backdrop for a warmer editorial jewellery setting.
+            </span>
+          </span>
+        </label>
       </div>
 
       <div className="cfg-section">

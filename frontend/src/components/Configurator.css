@@ -112,6 +112,71 @@
   border: 1px solid rgba(255,255,255,0.15);
 }
 
+.bg-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bg-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bg-toggle-ui {
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.bg-toggle-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text3);
+  transform: translateX(0);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.bg-toggle input:checked + .bg-toggle-ui {
+  border-color: var(--gold-dim);
+  background: rgba(201,168,76,0.14);
+}
+
+.bg-toggle input:checked + .bg-toggle-ui .bg-toggle-thumb {
+  background: var(--gold-light);
+  transform: translateX(16px);
+}
+
+.bg-toggle-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 1px;
+}
+
+.bg-toggle-title {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.bg-toggle-subtitle {
+  color: var(--text3);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .extra-input {
   width: 100%;
   background: var(--bg3);
