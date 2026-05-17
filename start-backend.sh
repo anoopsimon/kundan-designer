@@ -8,5 +8,5 @@ if [ -z "$OPENAI_API_KEY" ]; then
 fi
 
 cd "$(dirname "$0")/backend"
-echo "Starting Kundan Designer backend on http://localhost:8080"
-go run main.go
+echo "Starting Kundan Designer backend on http://localhost:8081"
+PORT=8081 go run main.go

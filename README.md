@@ -27,7 +27,14 @@ chmod +x start-backend.sh
 ./start-backend.sh
 ```
 
-Backend runs on http://localhost:8080
+Backend runs on http://localhost:8081
+
+### Optional: start both services with one command
+
+```bash
+chmod +x start.sh
+./start.sh
+```
 
 ### 3. Start the frontend (terminal 2)
 
@@ -55,8 +62,9 @@ kundan-designer/
 │   │   │   ├── Canvas.jsx        ← right panel: image display + download
 │   │   │   └── History.jsx       ← grid of past designs
 │   ├── index.html
-│   └── vite.config.js   ← proxies /api → :8080
+│   └── vite.config.js   ← proxies /api → :8081
 ├── start-backend.sh
+├── start.sh
 ├── start-frontend.sh
 └── README.md
 ```
@@ -106,10 +114,10 @@ kundan-designer/
 cd frontend && npm run build
 
 # Run backend (serves frontend from ../frontend/dist automatically)
-cd ../backend && go build -o kundan-designer && ./kundan-designer
+cd ../backend && go build -o kundan-designer && PORT=8081 ./kundan-designer
 ```
 
-Everything on http://localhost:8080 — no separate frontend process needed.
+Everything on http://localhost:8081 — no separate frontend process needed.
 
 ---
 
@@ -118,7 +126,7 @@ Everything on http://localhost:8080 — no separate frontend process needed.
 Since this runs locally, expose it over Tailscale for access from other devices:
 
 ```bash
-# The app will be reachable at http://your-tailscale-ip:8080
+# The app will be reachable at http://your-tailscale-ip:8081
 # No extra config needed — just run the backend on your Linux server
 ```
 
