@@ -8,6 +8,12 @@ AI-powered Indian jewellery design generator. Configure a piece and turn it into
 
 Built to be easy to demo, easy to remix, and visually strong enough to share without extra explanation.
 
+## Preview
+
+<p align="center">
+  <img src="assets/ui.png" alt="Kundan Designer UI preview" width="100%" />
+</p>
+
 ## Highlights
 
 - Instant product-style renders for Kundan, Polki, Meenakari, temple, oxidised, and plain metalwork.
