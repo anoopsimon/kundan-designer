@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .cfg-section {
@@ -196,7 +199,11 @@
 .extra-input:focus { border-color: var(--border2); }
 
 .cfg-footer {
-  padding: 14px 0 4px;
+  padding: 14px 0 12px;
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg2) 72%, rgba(26,25,22,0));
+  margin-top: auto;
 }
 
 .generate-btn {
